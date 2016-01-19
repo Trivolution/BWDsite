@@ -2,37 +2,28 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-     <script src="test.js"></script>
+    <script src="test.js"></script>
 </head>
 <body>
 <div class="content">
     <p>
         asdfasdfasdf blah
     </p>
+
 <!--
-
-
 
     <div class="popover" id="popover">
         <div class="prompt">
             <p class="question">
-                <img align="middle" src="files/theme/popover_logo.png"> <br>
-                <img align="middle" src="files/theme/popover_are_you_21.png"> <br>
-            </p>
-            <div id="input_form">
-                <input type="radio" name="answer" id="answer_yes">
-                <label for="answer_yes">
-                    <img align="middle" class="btn" src="files/theme/popover_yes.png"> <br>
-                </label>
-                <input type="radio" name="answer" id="answer_no">
-                <label for="answer_no">
-                    <img align="middle" class="btn" src="files/theme/popover_no.png"> <br>
-                </label>
-            </div>
-            <p class="question">
-                <img align="middle" id="button_submit" onclick="handle_popup()" src="files/theme/popover_enter_button.png">
+                <img align="middle" class="logo" src="files/theme/popover_logo.png">
+                <br>
+                <img align="middle" class="question" src="files/theme/popover_are_you_21.png">
+                <br>
+                <img align="left" class="btn" src="files/theme/popover_yes.png" onclick="hide_popup()">
+                <a href="http://pbskids.org"><img align="right" class="btn" src="files/theme/popover_no.png"></a>
             </p>
         </div>
     </div>
@@ -55,7 +46,7 @@
             width: 30%;
             left: 35%;
             top: 20%;
-            line-height: 40px;
+            line-height: 5em;
             padding: 10px;
             background-color: #5d5d5d;
             border: 2px solid #000;
@@ -63,68 +54,49 @@
         }
 
         div.popover div.prompt p {
-            margin-bottom: 0;
+            margin: 0;
+            padding: 20px;
         }
 
-        div.popover div.prompt img {
-            margin-bottom: 20px;
-            width: 70%;
+        div.popover div.prompt img.logo {
+            width: 100%;
         }
 
-        div.popover div.prompt .question {
+        div.popover div.prompt img.question {
+            height: 1.5em;
+            width: auto;
+        }
+
+        div.popover div.prompt img.btn {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 1.5em;
+            width: auto;
+        }
+
+        div.popover div.prompt p.question {
             text-align: center;
             font-size: 1.5em;
             color: #fff;
         }
 
-        div.popover div.prompt div#input_form {
-            line-height: 30px;
-            width: 120px;
-            margin: auto;
-        }
-
-        div.popover div.prompt div#input_form img.btn {
-            margin-bottom: 0;
-            height: 30px;
-            width: auto;
-            display: inline-block;
-        }
-
-        div.popover div.prompt label {
-            overflow: auto;
-        }
-
-        div.popover div.prompt input[type="radio"] {
-            display: none;
-        }
-
-        div.popover div.prompt input[type="radio"] + label:before {
-            display: inline-block;
-            content: "";
-            float: left;
-            background: url(files/theme/popover_checkbox_unchecked.png) top;
-            background-size: 30px 30px;
-            height: 30px;
-            width: 30px;
-        }
-
-        div.popover div.prompt input[type="radio"]:checked + label:before {
-            content: "";
-            background: url(files/theme/popover_checkbox_checked.png);
-            background-size: 30px 30px;
-            height: 30px;
-            width: 30px;
-        }
-
-        div.popover div.prompt img#button_submit {
-            margin-bottom: 0;
+        @media screen and (max-width: 600px) {
+            div.popover div.prompt {
+                position: fixed;
+                width: 90vw;
+                margin-left: auto;
+                margin-right: auto;
+                left: auto;
+                top: 20%;
+                line-height: 5em;
+                padding: 10px;
+                background-color: #5d5d5d;
+                border: 2px solid #000;
+            }
         }
     </style>
-
-
-
-
 -->
+
 
 </div>
 </body>
